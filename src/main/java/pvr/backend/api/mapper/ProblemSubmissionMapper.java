@@ -9,7 +9,7 @@ public class ProblemSubmissionMapper {
 
     public static ProblemSubmission toEntity(ProblemSubmissionDTO dto){
         ProblemSubmission entity = new ProblemSubmission();
-
+        entity.setId(dto.getId());
         entity.setUserName(dto.getUserName());
         entity.setEmail(dto.getEmail());
         entity.setContactNumber(dto.getContactNumber());
@@ -23,12 +23,13 @@ public class ProblemSubmissionMapper {
         entity.setAdminCount(dto.getAdminCount());
         entity.setAlternativeEmail(dto.getAlternativeEmail());
         entity.setAlternativeMobile(dto.getAlternativeMobile());
+        entity.setMemberContactNumberList(dto.getMemberContactNumberList());
 
          return entity;
     }
     public static ProblemSubmissionDTO toDTO(ProblemSubmission entity){
         ProblemSubmissionDTO dto = new ProblemSubmissionDTO();
-
+        dto.setId(entity.getId());
         dto.setUserName(entity.getUserName());
         dto.setEmail(entity.getEmail());
         dto.setContactNumber(entity.getContactNumber());
@@ -42,12 +43,14 @@ public class ProblemSubmissionMapper {
         dto.setAdminCount(entity.getAdminCount());
         dto.setAlternativeEmail(entity.getAlternativeEmail());
         dto.setAlternativeMobile(entity.getAlternativeMobile());
-
+        dto.setMemberContactNumberList(entity.getMemberContactNumberList());
         return dto;
     }
 
     public static ProblemSubmissionDTO toUpdateDTO(ProblemSubmissionDTO currDto, ProblemSubmissionDTO newDto){
-
+        if(newDto.getId()!=null){
+            currDto.setId(newDto.getId());
+        }
         if(newDto.getUserName()!=null){
             currDto.setUserName(newDto.getUserName());
         }
@@ -86,6 +89,9 @@ public class ProblemSubmissionMapper {
         }
         if(newDto.getAlternativeMobile()!=null){
             currDto.setAlternativeMobile(newDto.getAlternativeMobile());
+        }
+        if(newDto.getMemberContactNumberList()!=null){
+            currDto.setMemberContactNumberList(newDto.getMemberContactNumberList());
         }
         return currDto;
     }

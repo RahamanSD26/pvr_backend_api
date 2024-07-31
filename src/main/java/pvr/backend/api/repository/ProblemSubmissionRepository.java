@@ -11,4 +11,5 @@ import java.util.Optional;
 public interface ProblemSubmissionRepository extends MongoRepository<ProblemSubmission,String> {
    Optional<ProblemSubmissionDTO> findByEmail(String email);
    Optional<ProblemSubmissionDTO> findByContactNumber(String email);
+   Optional<ProblemSubmissionDTO> findByProblemStatement(String problemStatement);
 }

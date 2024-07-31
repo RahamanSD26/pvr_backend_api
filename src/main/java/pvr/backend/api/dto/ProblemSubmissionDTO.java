@@ -4,13 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.annotation.Id;
 
 import java.util.Date;
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProblemSubmissionDTO {
+    @Id
+    String id;
     String userName;
     String email;
     String contactNumber;
@@ -24,4 +29,5 @@ public class ProblemSubmissionDTO {
     String adminCount;
     String alternativeEmail;
     String AlternativeMobile;
+    List<String> memberContactNumberList;
 }
