@@ -1,0 +1,11 @@
+server:
+  port: 8082
+sidpik:
+  environment: LOCAL
+spring:
+  application:
+    name: pvr-backend-api
+  data:
+    mongodb:
+      auto-index-creation: false
+      uri: mongodb://localhost:27017/pvr

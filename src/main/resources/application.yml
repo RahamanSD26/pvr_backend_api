@@ -1,0 +1,11 @@
+server:
+  port: 8083
+sidpik:
+  environment: PROD
+spring:
+  application:
+    name: pvr-backend-api
+  data:
+    mongodb:
+      auto-index-creation: false
+#      uri: mongodb+srv://rahmansaifi363:HUBol0DU3r7Ru3Nf@cluster0.awywiup.mongodb.net/sportify-backend-api?retryWrites=true&w=majority&appName=Cluster0
